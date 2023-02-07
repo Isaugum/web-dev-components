@@ -82,6 +82,10 @@ $(document).ready(function () {
                         confirmButtonText: "Ok",
                     })
 
+                    $("#loginBox").remove();
+                    $(".loading-box").removeClass("hidden");
+                    $(".loading-box").addClass("flex");
+
                     return null;
                 }            
             }
@@ -97,5 +101,38 @@ $(document).ready(function () {
             }
         });
     }
+
+
+    //animation for loading
+    let dot_1 = document.getElementById("dot_1");
+    let dot_2 = document.getElementById("dot_2");
+    let dot_3 = document.getElementById("dot_3");
+
+    dot_1.style.transition = "150ms";
+    dot_2.style.transition = "150ms";
+    dot_3.style.transition = "150ms";
+
+    dot_2.style.transitionDelay = "40ms";
+    dot_3.style.transitionDelay = "80ms";
+
+    setInterval(() => {
+
+        let dotTimeout1 = setTimeout(() => {
+            dot_1.attributes[4].value = 10;
+            dot_2.attributes[4].value = 10;
+            dot_3.attributes[4].value = 10;
+        }, 200)
+        let dotTimeout2 = setTimeout(() => {
+            dot_1.attributes[4].value = 55;
+            dot_2.attributes[4].value = 55;
+            dot_3.attributes[4].value = 55;
+        }, 400)
+        let dotTimeout3 = setTimeout(() => {
+            dot_1.attributes[4].value = 30;
+            dot_2.attributes[4].value = 30;
+            dot_3.attributes[4].value = 30;
+        }, 600)
+
+    }, 1700);
 
 });
