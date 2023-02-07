@@ -118,14 +118,14 @@ $(document).ready(function () {
     setInterval(() => {
 
         let dotTimeout1 = setTimeout(() => {
-            dot_1.attributes[4].value = 10;
-            dot_2.attributes[4].value = 10;
-            dot_3.attributes[4].value = 10;
+            dot_1.attributes[4].value = 20;
+            dot_2.attributes[4].value = 20;
+            dot_3.attributes[4].value = 20;
         }, 200)
         let dotTimeout2 = setTimeout(() => {
-            dot_1.attributes[4].value = 55;
-            dot_2.attributes[4].value = 55;
-            dot_3.attributes[4].value = 55;
+            dot_1.attributes[4].value = 45;
+            dot_2.attributes[4].value = 45;
+            dot_3.attributes[4].value = 45;
         }, 400)
         let dotTimeout3 = setTimeout(() => {
             dot_1.attributes[4].value = 30;
@@ -133,6 +133,6 @@ $(document).ready(function () {
             dot_3.attributes[4].value = 30;
         }, 600)
 
-    }, 1700);
+    }, 1400);
 
 });
